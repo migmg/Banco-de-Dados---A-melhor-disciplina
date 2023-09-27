@@ -84,3 +84,17 @@ ORDER BY Data_Nascimento
 LIMIT 1;
 END
 
+
+exerc 9 CREATE PROCEDURE sp_LivrosAteAno(IN ano YEAR): Esta linha define o início da criação da stored procedure chamada sp_LivrosAteAno. A procedure é projetada para listar os livros publicados até um ano específico, e recebe um parâmetro chamado ano do tipo YEAR.
+
+BEGIN: O bloco BEGIN marca o início do corpo da stored procedure. A partir deste ponto, começamos a definir a lógica da procedure.
+
+SELECT Titulo, Ano_Publicacao: Esta é a consulta SQL que seleciona os títulos e anos de publicação dos livros.
+
+FROM Livro: Indica a tabela da qual estamos selecionando os dados, que é a tabela Livro.
+
+WHERE Ano_Publicacao <= ano: Esta parte da consulta filtra os resultados para encontrar os livros onde o ano de publicação é menor ou igual ao valor fornecido no parâmetro ano.
+
+ORDER BY Ano_Publicacao DESC;: Isso ordena os resultados por ano de publicação em ordem decrescente, o que significa que os livros mais recentes aparecerão no topo da lista.
+
+END;: Isso marca o fim do corpo da stored procedure.
