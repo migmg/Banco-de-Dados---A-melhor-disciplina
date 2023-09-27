@@ -37,3 +37,10 @@ SET respost = 'não tem livros';
 END IF;
 select respost;
 END;
+
+exerc 5 CREATE PROCEDURE sp_LivrosAteAno(IN ano year)
+BEGIN
+SELECT Titulo, Ano_Publicacao from Livro
+where Ano_Publicacao <= ano
+ORDER BY Ano_Publicacao desc;
+END;
