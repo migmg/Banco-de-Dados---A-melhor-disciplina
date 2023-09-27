@@ -98,3 +98,12 @@ WHERE Ano_Publicacao <= ano: Esta parte da consulta filtra os resultados para en
 ORDER BY Ano_Publicacao DESC;: Isso ordena os resultados por ano de publicação em ordem decrescente, o que significa que os livros mais recentes aparecerão no topo da lista.
 
 END;: Isso marca o fim do corpo da stored procedure.
+
+
+exerc 10 CREATE PROCEDURE sp_LivrosESeusAutores()
+BEGIN
+select Livro.Titulo, Autor.Nome, Autor.Sobrenome
+from Livros
+inner join Autor_Livro on Autor_Livro.Livro_ID = Livros.Livro_ID
+inner join Autores on Autor_Livro.Autor_ID = Autor.Autor_ID;
+END
