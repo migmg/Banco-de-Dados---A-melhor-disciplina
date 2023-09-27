@@ -20,8 +20,8 @@ where nome_categoria = Categoria.Nome
 group by Categoria.Nome;
 END;
 
-ex 4 
-CREATE PROCEDURE sp_VerificarLivrosCategoria(IN nome_categoria varchar(200), OUT resposta varchar(50))
+
+exerc 4 CREATE PROCEDURE sp_VerificarLivrosCategoria(IN nome_categoria varchar(200), OUT resposta varchar(50))
 BEGIN
 DECLARE quantidade INT DEFAULT 0;
 	select count(Livro.Titulo) as number_de_livros
