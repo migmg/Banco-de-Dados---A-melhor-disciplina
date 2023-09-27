@@ -76,3 +76,11 @@ begin
     end if;
     select resposta;
 end;
+
+exerc 8 CREATE PROCEDURE sp_AutorMaisAntigo()
+BEGIN
+SELECT Nome from Autor
+ORDER BY Data_Nascimento
+LIMIT 1;
+END
+
