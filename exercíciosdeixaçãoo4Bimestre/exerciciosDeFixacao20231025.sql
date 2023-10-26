@@ -15,4 +15,4 @@ after update on Clientes
 for each row
 insert into Auditoria(mensagem)
 values (concat('antigo nome', old.nome, 'nome novo' , new.nome));
-4)
+
