@@ -9,7 +9,7 @@ values('joazinho')
 before delete on Clientes
 for each row
 insert into Auditoria(mensagem)
-values ('informando')
+values ('informando nome excluido')
 3)create trigger update_nome
 after update on Clientes
 for each row
